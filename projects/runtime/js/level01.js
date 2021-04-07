@@ -28,7 +28,9 @@ var level01 = function (window) {
         // TODO 6 and on go here
         // BEGIN EDITING YOUR CODE HERE
 
-        
+        var hitZoneSize = 25;
+        var damageFromObsticle = 10;
+        var sawBladehHitZone = game.createObsticle(hitZoneSize, damageFromObsticle);
         
         
         // DO NOT EDIT CODE BELOW HERE
