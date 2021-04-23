@@ -37,13 +37,13 @@ var background = function (window) {
             // TODO: 2 - Part 2
             // this fills the background with a obnoxious yellow
             // you should modify this to suit your game
-            var backgroundFill = draw.rect(canvasWidth,groundY,'black');
+            var backgroundFill = draw.rect(canvasWidth,groundY,'white');
             background.addChild(backgroundFill);
             
             // TODO: 3 - Add a moon and starfield
             var circle;
-            for (var i = 0; i < 50; i++) {
-                circle = drawCircle(4, 'blue', 'blue', 2);
+            for (var i = 0; i < 30; i++) {
+                circle = draw.circle(4, 'darkRed', 'red', 1.5);
                 circle.x = canvasWidth * Math.random();
                 circle.y = groundY * Math.random();
                 background.addChild(circle);
@@ -60,10 +60,30 @@ var background = function (window) {
           
 
             // TODO 5: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
-        
+            for(var i = 0; i < 150; i++) {
+                var buildingHeight = Math.random() * 300;
+                if (buildingHeight <= 200) {
+                    buildingHeight += 100;
+                }
+                var buildingColors = ["darkBlue", "darkBlue", "darkBlue", "darkBlue", "darkBlue", "darkBlue"]
             
+                var building = draw.rect(75, buildingHeight, buildingColors[i], 'blue', 1.5);
+                building.x = 200*i;
+                building.y = groundY - buildingHeight;
+                background.addChild(building);
+                buildings.push(building);
+           
+            }
+
+            
+             
             // TODO 4: Part 1 - Add a tree
-         
+            tree = draw.bitmap('img/tree.png');
+            tree.x = 175;
+            tree.y = groundY - 250;
+            background.addChild(tree);
+        
+        
         } // end of render function - DO NOT DELETE
         
         
@@ -84,7 +104,7 @@ var background = function (window) {
             
             // TODO 5: Part 2 - Parallax
             
-            for (var i = 0; i < buildingss.length; i++) {
+            for (var i = 0; i < buildings.length; i++) {
                 var building = buildings[i];
                 building.x = building.x - 1;
                 if (building.x < -200){
