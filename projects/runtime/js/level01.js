@@ -61,7 +61,7 @@ var level01 = function (window) {
         }
         
         function createEnemy(x, y){
-            var enemy = game.craeteGameItem('enemy', 25);
+            var enemy = game.createGameItem('enemy', 25);
             var redSquare = draw.rect(50, 50, 'red');
             redSquare.x = -25;
             redSquare.y = -25;
