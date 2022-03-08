@@ -1,0 +1,86 @@
+
+body {
+    background-color: rgb(221, 209, 228);
+  }
+  
+  #board {
+    width: 1000px;
+    height: 500px;
+    border: 5px solid;
+    border-image: conic-gradient(rgb(86, 2, 141), rgb(206, 6, 6), rgb(86, 2, 141),rgb(7, 179, 30), rgb(86, 2, 141), rgb(204, 201, 10), rgb(86, 2, 141), rgb(26, 7, 196), rgb(86, 2, 141), rgb(194, 133, 3), rgb(86, 2, 141))1;
+    background-color: black;
+    position: absolute;
+    top: 200px;
+  }
+  
+  #ball {
+    background-color: rgb(90, 1, 150);
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 220px;
+    left: 240px;
+  }
+
+  #rightPaddle {
+    background-color: rgb(219, 157, 23);
+    width: 10px;
+    height: 100px;
+    border-radius: 10px;
+    position: absolute;
+    top: 200px;
+    left: 490px;
+  }
+
+  #leftPaddle {
+    background-color: rgb(219, 157, 23);
+    width: 10px;
+    height: 100px;
+    border-radius: 10px;
+    position: absolute;
+    top: 200px;
+    left: 0.1px;
+  }
+
+  #score1 {
+    font-size: 3vw;
+    font-family: comic-sans;
+    color: rgb(102, 0, 0);
+    position: absolute;
+    right: 150px;
+    top: 50px;
+  }
+
+  #score2 {
+    font-size: 3vw;
+    font-family: comic-sans;
+    color: rgb(102, 0, 0);
+    position: absolute;
+    left: 150px;
+    top: 50px;
+  }
+
+  #endGameButton {
+    font-size: 3vw;
+    font-family: comic-sans;
+    background-color: rgb(150, 0, 0);
+    width: 200px;
+    height: 200px;
+    border-radius: 1px;
+    position: absolute;
+    top: 50px;
+    left: 1300px;
+  }
+
+  #Pong {
+    font-size: 6vw;
+    font-family: comic-sans;
+    border: 5px solid;
+    border-image: conic-gradient(rgb(89, 0, 161), rgb(9, 6, 165), rgb(206, 6, 6), rgb(89, 0, 161),  rgb(206, 6, 6), rgb(9, 6, 165), rgb(206, 6, 6), rgb(9, 6, 165), rgb(89, 0, 161))1;
+    color: rgb(150, 0, 0);
+    position: absolute;
+    top: 1px;
+    left: 370px;
+  }
+
